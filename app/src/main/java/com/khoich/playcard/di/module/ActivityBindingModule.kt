@@ -1,5 +1,6 @@
 package com.khoich.playcard.di.module
 
+import com.khoich.playcard.ui.entermatch.EnterMatchFragment
 import com.khoich.playcard.ui.home.HomeFragment
 import com.khoich.playcard.ui.main.MainActivity
 import com.khoich.playcard.ui.splash.SplashFragment
@@ -15,4 +16,7 @@ abstract class ActivityBindingModule {
     abstract fun bindSplashFragment(): SplashFragment
     @ContributesAndroidInjector
     abstract fun bindHomeFragment(): HomeFragment
+    @ContributesAndroidInjector
+    abstract fun bindEnterMatchFragment(): EnterMatchFragment
+
 }

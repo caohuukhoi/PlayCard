@@ -5,7 +5,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey_icon">#CDCDCD</color>
     <color name="greyWhite">#FFF0F0F0</color>
-    <color name="greyText">#FFA4A4A4</color>
-    <color name="orange_top">#F0FF774D</color>
+    <color name="greyText">#FF707070</color>
+    <color name="yellow_top">#FFC400</color>
     <color name="blue_icon">#00E5FF</color>
 </resources>

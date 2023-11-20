@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources >
     <!-- Base application theme. -->
     <style name="Base.Theme.PlayCard" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -6,6 +6,6 @@
     </style>
 
     <style name="Theme.PlayCard" parent="Theme.MaterialComponents.Light.NoActionBar" >
-        <item name="android:statusBarColor">#F04DFCFF</item>
+        <item name="android:statusBarColor">#FFC400</item>
     </style>
 </resources>

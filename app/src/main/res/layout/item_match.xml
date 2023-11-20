@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@color/white">
+
+        <!-- ConstraintLayout 1 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlay1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/clPlay2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvPlay1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:background="@drawable/shape_name"
+                android:gravity="center"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Khôi" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_player"
+                app:layout_constraintEnd_toEndOf="@id/tvPlay1"
+                app:layout_constraintStart_toStartOf="@id/tvPlay1"
+                app:layout_constraintTop_toBottomOf="@id/tvPlay1"
+                tools:src="@drawable/img" />
+
+            <TextView
+                android:id="@+id/tvScore1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/shape_score_odd"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img1"
+                tools:text="10" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ConstraintLayout 2 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlay2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/clPlay3"
+            app:layout_constraintStart_toEndOf="@id/clPlay1"
+            app:layout_constraintTop_toTopOf="@id/clPlay1">
+
+            <TextView
+                android:id="@+id/tvPlay2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:background="@drawable/shape_name"
+                android:gravity="center"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Giang" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_player"
+                app:layout_constraintEnd_toEndOf="@id/tvPlay2"
+                app:layout_constraintStart_toStartOf="@id/tvPlay2"
+                app:layout_constraintTop_toBottomOf="@id/tvPlay2"
+                tools:src="@drawable/img" />
+
+            <TextView
+                android:id="@+id/tvScore2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/shape_score_even"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img2"
+                tools:text="10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ConstraintLayout 3 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlay3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/clPlay4"
+            app:layout_constraintStart_toEndOf="@id/clPlay2"
+            app:layout_constraintTop_toTopOf="@id/clPlay1">
+
+            <TextView
+                android:id="@+id/tvPlay3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:background="@drawable/shape_name"
+                android:gravity="center"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nhi" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_player"
+                app:layout_constraintEnd_toEndOf="@id/tvPlay3"
+                app:layout_constraintStart_toStartOf="@id/tvPlay3"
+                app:layout_constraintTop_toBottomOf="@id/tvPlay3"
+                tools:src="@drawable/img" />
+
+            <TextView
+                android:id="@+id/tvScore3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/shape_score_odd"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img3"
+                tools:text="10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ConstraintLayout 4 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlay4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/clPlay5"
+            app:layout_constraintStart_toEndOf="@id/clPlay3"
+            app:layout_constraintTop_toTopOf="@id/clPlay1">
+
+            <TextView
+                android:id="@+id/tvPlay4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:background="@drawable/shape_name"
+                android:gravity="center"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Thủy" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_player"
+                app:layout_constraintEnd_toEndOf="@id/tvPlay4"
+                app:layout_constraintStart_toStartOf="@id/tvPlay4"
+                app:layout_constraintTop_toBottomOf="@id/tvPlay4"
+                tools:src="@drawable/img" />
+
+            <TextView
+                android:id="@+id/tvScore4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/shape_score_even"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img4"
+                tools:text="10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ConstraintLayout 5 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlay5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/clPlay4"
+            app:layout_constraintTop_toTopOf="@id/clPlay1">
+
+            <TextView
+                android:id="@+id/tvPlay5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:background="@drawable/shape_name"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Dương" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_player"
+                app:layout_constraintEnd_toEndOf="@id/tvPlay5"
+                app:layout_constraintStart_toStartOf="@id/tvPlay5"
+                app:layout_constraintTop_toBottomOf="@id/tvPlay5"
+                tools:src="@drawable/img" />
+
+            <TextView
+                android:id="@+id/tvScore5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/shape_score_odd"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img5"
+                tools:text="10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

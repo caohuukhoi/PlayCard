@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.khoich.playcard.di.viewmodel.ViewModelFactory
 import com.khoich.playcard.di.viewmodel.ViewModelKey
+import com.khoich.playcard.ui.entermatch.EnterMatchViewModel
 import com.khoich.playcard.ui.home.HomeViewModel
 import com.khoich.playcard.ui.main.MainViewModel
 import com.khoich.playcard.ui.splash.SplashViewModel
@@ -32,5 +33,9 @@ abstract class ViewModelModule {
     @ViewModelKey(HomeViewModel::class)
     internal abstract fun homeViewModel(viewModel: HomeViewModel): ViewModel
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(EnterMatchViewModel::class)
+    internal abstract fun enterMatchViewModel(viewModel: EnterMatchViewModel): ViewModel
 
 }

@@ -1,11 +1,8 @@
 package com.khoich.playcard.ui.splash
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.os.Handler
+import android.os.Looper
+import androidx.navigation.fragment.findNavController
 import com.khoich.playcard.R
 import com.khoich.playcard.databinding.FragmentSplashBinding
 import com.khoich.playcard.ui.base.BaseFragment
@@ -16,6 +13,9 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>(){
     override fun viewModelClass(): Class<SplashViewModel> = SplashViewModel::class.java
 
     override fun initView() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+            }, 2000)
     }
 
 }

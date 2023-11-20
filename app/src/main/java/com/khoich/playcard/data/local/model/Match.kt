@@ -40,7 +40,7 @@ data class Game(
 data class Player(
     @PrimaryKey(autoGenerate = true)
     val playerId: Int,
-    val playerImage: Int,
     val playerName: String,
+    val playerImage: Int,
     val playerScore: Int
 )
