@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item2player"
+        android:title="2 người chơi"/>
+
+    <item
+        android:id="@+id/item3player"
+        android:title="3 người chơi"/>
+
+    <item
+        android:id="@+id/item4player"
+        android:title="4 người chơi"/>
+
+    <item
+        android:id="@+id/item5player"
+        android:title="5 người chơi"/>
+
+</menu>
