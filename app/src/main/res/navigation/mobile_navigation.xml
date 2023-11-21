@@ -24,10 +24,21 @@
         <action
             android:id="@+id/action_homeFragment_to_enterMatchFragment"
             app:destination="@id/enterMatchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_playFragment"
+            app:destination="@id/playFragment" />
     </fragment>
     <fragment
         android:id="@+id/enterMatchFragment"
         android:name="com.khoich.playcard.ui.entermatch.EnterMatchFragment"
         android:label="EnterMatchFragment"
-        tools:layout="@layout/fragment_enter_match"/>
+        tools:layout="@layout/fragment_enter_match">
+    </fragment>
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.khoich.playcard.ui.play.PlayFragment"
+        android:label="PlayFragment"
+        tools:layout="@layout/fragment_play">
+    </fragment>
+
 </navigation>

@@ -107,10 +107,12 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/clInfoPlayer"
                     android:layout_marginTop="32dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/btnNameGame">
 
+                    <!--  Relative player 1  -->
                     <RelativeLayout
                         android:id="@+id/rl1"
                         android:layout_width="wrap_content"
@@ -123,6 +125,7 @@
                             android:id="@+id/tvPlayer1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
                             android:fontFamily="@font/roboto_medium"
                             android:text="Người chơi 1"
                             android:textColor="@color/greyText"
@@ -132,9 +135,10 @@
                             android:id="@+id/fl1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/tvPlayer1"
                             android:layout_alignStart="@id/tvPlayer1"
                             android:layout_alignEnd="@id/tvPlayer1"
-                            android:layout_below="@id/tvPlayer1">
+                            android:layout_centerHorizontal="true">
 
                             <ImageView
                                 android:id="@+id/img1"
@@ -143,27 +147,33 @@
                                 android:layout_gravity="center"
                                 android:adjustViewBounds="true"
                                 android:visibility="gone"
-                                tools:src="@drawable/img"/>
+                                tools:src="@drawable/img" />
 
                             <Button
                                 android:id="@+id/btnChooseImage1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="128dp"
-                                android:backgroundTint="#A0A0A0"
                                 android:layout_gravity="center"
+                                android:backgroundTint="#A0A0A0"
                                 android:text="Chọn ảnh" />
 
                         </FrameLayout>
 
                         <EditText
-                            android:layout_below="@id/fl1"
+                            android:id="@+id/edt1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/edt1"
-                            android:hint="Nhập tên người chơi 1"/>
+                            android:layout_below="@id/fl1"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Nhập tên người chơi 1"
+                            android:inputType="text"
+                            android:maxLength="16"
+                            android:textSize="@dimen/_14sdp" />
 
                     </RelativeLayout>
 
+                    <!--  Relative player 2  -->
                     <RelativeLayout
                         android:id="@+id/rl2"
                         android:layout_width="wrap_content"
@@ -176,6 +186,7 @@
                             android:id="@+id/tvPlayer2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
                             android:fontFamily="@font/roboto_medium"
                             android:text="Người chơi 2"
                             android:textColor="@color/greyText"
@@ -185,9 +196,10 @@
                             android:id="@+id/fl2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/tvPlayer2"
                             android:layout_alignStart="@id/tvPlayer2"
                             android:layout_alignEnd="@id/tvPlayer2"
-                            android:layout_below="@id/tvPlayer2">
+                            android:layout_centerHorizontal="true">
 
                             <ImageView
                                 android:id="@+id/img2"
@@ -196,28 +208,252 @@
                                 android:layout_gravity="center"
                                 android:adjustViewBounds="true"
                                 android:visibility="gone"
-                                tools:src="@drawable/img"/>
+                                tools:src="@drawable/img" />
 
                             <Button
                                 android:id="@+id/btnChooseImage2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="128dp"
-                                android:backgroundTint="#A0A0A0"
                                 android:layout_gravity="center"
+                                android:backgroundTint="#A0A0A0"
                                 android:text="Chọn ảnh" />
 
                         </FrameLayout>
 
                         <EditText
-                            android:layout_below="@id/fl2"
+                            android:id="@+id/edt2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/edt2"
-                            android:hint="Nhập tên người chơi 1"/>
+                            android:layout_below="@id/fl2"
+                            android:inputType="text"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:hint="Nhập tên người chơi 2"
+                            android:maxLength="16"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </RelativeLayout>
+
+                    <!--  Relative player 33333  -->
+                    <RelativeLayout
+                        android:id="@+id/rl3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        app:layout_constraintEnd_toStartOf="@id/rl2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rl1">
+
+                        <TextView
+                            android:id="@+id/tvPlayer3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Người chơi 3"
+                            android:textColor="@color/greyText"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <FrameLayout
+                            android:id="@+id/fl3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvPlayer3"
+                            android:layout_alignStart="@id/tvPlayer3"
+                            android:layout_alignEnd="@id/tvPlayer3"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:id="@+id/img3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="128dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:visibility="gone"
+                                tools:src="@drawable/img" />
+
+                            <Button
+                                android:id="@+id/btnChooseImage3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="128dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#A0A0A0"
+                                android:text="Chọn ảnh" />
+
+                        </FrameLayout>
+
+                        <EditText
+                            android:id="@+id/edt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fl3"
+                            android:inputType="text"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/_14sdp"
+                            android:hint="Nhập tên người chơi 3"
+                            android:maxLength="16" />
+
+                    </RelativeLayout>
+
+                    <!--  Relative player 4  -->
+                    <RelativeLayout
+                        android:id="@+id/rl4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/rl3"
+                        app:layout_constraintTop_toTopOf="@id/rl3">
+
+                        <TextView
+                            android:id="@+id/tvPlayer4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Người chơi 4"
+                            android:textColor="@color/greyText"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <FrameLayout
+                            android:id="@+id/fl4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvPlayer4"
+                            android:layout_alignStart="@id/tvPlayer4"
+                            android:layout_alignEnd="@id/tvPlayer4"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:id="@+id/img4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="128dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:visibility="gone"
+                                tools:src="@drawable/img" />
+
+                            <Button
+                                android:id="@+id/btnChooseImage4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="128dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#A0A0A0"
+                                android:text="Chọn ảnh" />
+
+                        </FrameLayout>
+
+                        <EditText
+                            android:id="@+id/edt4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fl4"
+                            android:inputType="text"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/_14sdp"
+                            android:hint="Nhập tên người chơi 4"
+                            android:maxLength="16" />
+
+                    </RelativeLayout>
+
+                    <!--  Relative player 45 -->
+                    <RelativeLayout
+                        android:id="@+id/rl5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rl3">
+
+                        <TextView
+                            android:id="@+id/tvPlayer5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Người chơi 5"
+                            android:textColor="@color/greyText"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <FrameLayout
+                            android:id="@+id/fl5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvPlayer5"
+                            android:layout_alignStart="@id/tvPlayer5"
+                            android:layout_alignEnd="@id/tvPlayer5"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:id="@+id/img5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="128dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:visibility="gone"
+                                tools:src="@drawable/img" />
+
+                            <Button
+                                android:id="@+id/btnChooseImage5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="128dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#A0A0A0"
+                                android:text="Chọn ảnh" />
+
+                        </FrameLayout>
+
+                        <EditText
+                            android:id="@+id/edt5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fl5"
+                            android:inputType="text"
+                            android:gravity="center"
+                            android:textSize="@dimen/_14sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Nhập tên người chơi 5"
+                            android:maxLength="16" />
 
                     </RelativeLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/clRules"
+                    app:layout_constraintTop_toBottomOf="@id/clInfoPlayer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/clRules"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingStart="64dp"
+                    android:paddingEnd="64dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_save_disable"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="64dp"
+                    android:text="Xong"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#444444"
+                    android:textSize="@dimen/_18sdp" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

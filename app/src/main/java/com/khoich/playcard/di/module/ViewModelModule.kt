@@ -7,6 +7,7 @@ import com.khoich.playcard.di.viewmodel.ViewModelKey
 import com.khoich.playcard.ui.entermatch.EnterMatchViewModel
 import com.khoich.playcard.ui.home.HomeViewModel
 import com.khoich.playcard.ui.main.MainViewModel
+import com.khoich.playcard.ui.play.PlayViewModel
 import com.khoich.playcard.ui.splash.SplashViewModel
 
 import dagger.Binds
@@ -37,5 +38,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(EnterMatchViewModel::class)
     internal abstract fun enterMatchViewModel(viewModel: EnterMatchViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(PlayViewModel::class)
+    internal abstract fun playViewModel(viewModel: PlayViewModel): ViewModel
 
 }

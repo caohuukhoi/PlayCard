@@ -33,4 +33,8 @@ class DatabaseModule {
         return PreferenceManager.getDefaultSharedPreferences(appContext)
     }
 
+    @Singleton
+    @Provides
+    fun provideMatchDao(db: LocalDatabase) = db.matchDao()
+
 }
