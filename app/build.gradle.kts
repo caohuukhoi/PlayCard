@@ -49,7 +49,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.databinding:databinding-runtime:8.1.3")
+    implementation("androidx.databinding:databinding-runtime:8.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -57,7 +57,6 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
 
     // Timber
@@ -72,9 +71,11 @@ dependencies {
 
     // Coroutine
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    // ViewModel
+    // ViewModel // Coroutine Lifecycle Scopes
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
 
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/bg_popup_game">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_top_popup"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="Nhập tên người chơi"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clEnterScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPlayer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/edtName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Nhập điểm"
+                    android:gravity="center"
+                    android:hint="Nhập tên người chơi 1"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPlayer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clPlayer1">
+
+                <EditText
+                    android:id="@+id/edtName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Nhập điểm"
+                    android:gravity="center"
+                    android:hint="Nhập tên người chơi 2"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPlayer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clPlayer2">
+
+                <EditText
+                    android:id="@+id/edtName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Nhập điểm"
+                    android:gravity="center"
+                    android:hint="Nhập tên người chơi 3"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPlayer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clPlayer3">
+
+                <EditText
+                    android:id="@+id/edtName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Nhập điểm"
+                    android:gravity="center"
+                    android:hint="Nhập tên người chơi 4"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPlayer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clPlayer4">
+
+                <EditText
+                    android:id="@+id/edtName5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Nhập điểm"
+                    android:gravity="center"
+                    android:hint="Nhập tên người chơi 5"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/bg_close"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Đóng"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvSave"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clEnterScore" />
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/shape_save_disable"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Xong"
+            android:textColor="#FF444444"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvClose"
+            app:layout_constraintTop_toBottomOf="@id/clEnterScore" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

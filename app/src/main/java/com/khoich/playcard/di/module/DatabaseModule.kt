@@ -37,4 +37,8 @@ class DatabaseModule {
     @Provides
     fun provideMatchDao(db: LocalDatabase) = db.matchDao()
 
+    @Singleton
+    @Provides
+    fun provideScoreDao(db: LocalDatabase) = db.scoreDao()
+
 }

@@ -2,15 +2,17 @@ package com.khoich.playcard.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.khoich.playcard.data.local.dao.GameDao
 import com.khoich.playcard.data.local.dao.MatchDao
-import com.khoich.playcard.data.local.dao.PlayerDao
+import com.khoich.playcard.data.local.dao.ScoreDao
 import com.khoich.playcard.data.local.model.Game
+import com.khoich.playcard.data.local.model.GameScore
 import com.khoich.playcard.data.local.model.Match
 import com.khoich.playcard.data.local.model.Player
+import com.khoich.playcard.data.local.model.PlayerGameCrossRef
+import com.khoich.playcard.data.local.model.Winner
 
 @Database(
-    entities = [Match::class, Player::class, Game::class],
+    entities = [Match::class, Game::class, Winner::class, Player::class, PlayerGameCrossRef::class, GameScore::class],
     version = 2,
     exportSchema = false
 )
@@ -19,8 +21,5 @@ abstract class LocalDatabase: RoomDatabase() {
 
     abstract fun matchDao(): MatchDao
 
-    abstract fun playerDao(): PlayerDao
-
-    abstract fun gameDao(): GameDao
-
+    abstract fun scoreDao(): ScoreDao
 }

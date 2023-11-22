@@ -6,7 +6,9 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import com.khoich.playcard.R
+import com.khoich.playcard.data.local.model.Match
 import com.khoich.playcard.data.local.model.Player
+import com.khoich.playcard.data.local.model.relations.MatchWithPlayers
 import com.khoich.playcard.databinding.FragmentEnterMatchBinding
 import com.khoich.playcard.ui.base.BaseFragment
 import com.khoich.playcard.util.listener.setOnSingleClickListener
@@ -28,76 +30,10 @@ class EnterMatchFragment : BaseFragment<FragmentEnterMatchBinding, EnterMatchVie
         enterInfo()
 
         binding.tvSave.setOnSingleClickListener {
-            viewModel.saveMatch(listInfoPlayer())
-            findNavController().popBackStack()
+            saveMatch()
         }
     }
 
-//    private fun listInfoPlayer(): ArrayList<Player> {
-//        val listPlayer = ArrayList<Player>()
-//        if(binding.edt1.text.toString().trim().isNotEmpty()){
-//            val player = Player(
-//                playerName = binding.edt1.text.toString().trim(),
-//                playerImage = R.id.img1,
-//                playerScore = 0
-//            )
-//            listPlayer.add(player)
-//        }
-//        if(binding.edt2.text.toString().trim().isNotEmpty()){
-//            val player = Player(
-//                playerName = binding.edt2.text.toString().trim(),
-//                playerImage = R.id.img2,
-//                playerScore = 0
-//            )
-//            listPlayer.add(player)
-//        }
-//        if(binding.edt3.text.toString().trim().isNotEmpty()){
-//            val player = Player(
-//                playerName = binding.edt3.text.toString().trim(),
-//                playerImage = R.id.img3,
-//                playerScore = 0
-//            )
-//            listPlayer.add(player)
-//        }
-//        if(binding.edt4.text.toString().trim().isNotEmpty()){
-//            val player = Player(
-//                playerName = binding.edt4.text.toString().trim(),
-//                playerImage = R.id.img4,
-//                playerScore = 0
-//            )
-//            listPlayer.add(player)
-//        }
-//        if(binding.edt5.text.toString().trim().isNotEmpty()){
-//            val player = Player(
-//                playerName = binding.edt5.text.toString().trim(),
-//                playerImage = R.id.img5,
-//                playerScore = 0
-//            )
-//            listPlayer.add(player)
-//        }
-//        return listPlayer
-//    }
-
-    private fun listInfoPlayer(): ArrayList<Player> {
-        val listPlayer = ArrayList<Player>()
-
-        val editTexts = listOf(binding.edt1, binding.edt2, binding.edt3, binding.edt4, binding.edt5)
-        val imageIds = listOf(R.id.img1, R.id.img2, R.id.img3, R.id.img4, R.id.img5)
-
-        for ((index, editText) in editTexts.withIndex()) {
-            val playerName = editText.text.toString().trim()
-            if (playerName.isNotEmpty()) {
-                val player = Player(
-                    playerName = playerName,
-                    playerImage = imageIds[index],
-                    playerScore = 0
-                )
-                listPlayer.add(player)
-            }
-        }
-
-        return listPlayer
-    }
 
     private fun enterInfo() {
         binding.tvSave.isEnabled = false
@@ -264,5 +200,45 @@ class EnterMatchFragment : BaseFragment<FragmentEnterMatchBinding, EnterMatchVie
         }
     }
 
+    private fun saveMatch() {
+        val matchWithPlayers = createMatchWithPlayers()
+        viewModel.saveMatchWithPlayers(matchWithPlayers)
+        findNavController().popBackStack()
+    }
 
+    private fun createMatchWithPlayers(): MatchWithPlayers {
+        val match = Match() // Tạo một đối tượng Match với matchId tạm thời là 0
+        val listPlayers = mutableListOf<Player>()
+
+        val playerCount = binding.btnNumberPlayer.text.toString().toIntOrNull() ?: 0
+
+        val editTexts = listOf(binding.edt1, binding.edt2, binding.edt3, binding.edt4, binding.edt5)
+            .take(playerCount)
+
+//        val imageIds = listOf(R.id.img1, R.id.img2, R.id.img3, R.id.img4, R.id.img5).take(playerCount)
+
+        val imageIds = listOf(
+            R.drawable.img,
+            R.drawable.img,
+            R.drawable.img,
+            R.drawable.img,
+            R.drawable.img
+        ).take(playerCount)
+
+
+        for ((index, editText) in editTexts.withIndex()) {
+            val playerName = editText.text.toString().trim()
+            if (playerName.isNotEmpty()) {
+                val player = Player(
+                    playerName = playerName,
+                    playerImage = imageIds[index],
+                    playerScore = 0,
+                    matchId = 0 // Tạo matchId tạm thời là 0
+                )
+                listPlayers.add(player)
+            }
+        }
+
+        return MatchWithPlayers(match, listPlayers)
+    }
 }
