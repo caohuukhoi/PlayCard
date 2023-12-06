@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Play Card</string>
     <string name="image_player">image player</string>
+    <string name="play">Play</string>
     <string name="home">Home</string>
     <string name="add">Add</string>
-    <string name="play">Play</string>
 </resources>

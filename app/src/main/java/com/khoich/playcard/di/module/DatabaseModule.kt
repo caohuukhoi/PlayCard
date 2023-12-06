@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import androidx.room.Room
-import com.khoich.playcard.data.LocalDatabase
+import com.khoich.playcard.data.local.LocalDatabase
 
 import dagger.Module
 import dagger.Provides

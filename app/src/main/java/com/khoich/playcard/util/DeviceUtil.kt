@@ -19,11 +19,11 @@ fun showDialogSetting(context: Context) {
     context.startActivity(intent)
 }
 
-fun showSoftKeyboard(activity: Activity) {
-    val imm: InputMethodManager =
-        activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
-}
+//fun showSoftKeyboard(activity: Activity) {
+//    val imm: InputMethodManager =
+//        activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
+//}
 
 fun hiddenSoftKeyboard(activity: Activity) {
     val imm: InputMethodManager =

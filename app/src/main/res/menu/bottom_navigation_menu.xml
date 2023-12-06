@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/gameHistoryFragment"
+        android:icon="@drawable/ic_saved"
+        android:title="Saved"/>
+
+
+    <item
+        android:id="@+id/playerInfoFragment"
+        android:icon="@drawable/ic_people"
+        android:title="Player"/>
+
+    <item
+        android:id="@+id/rulesFragment"
+        android:icon="@drawable/ic_rules"
+        android:title="Rule"/>
+
+</menu>

@@ -18,7 +18,7 @@ class NetworkModule {
     // BASE_URL_NEW: https ://fakestoreapi.com/    END_POINT: products
 
     companion object {
-        private const val BASE_URL_NEW = "https://fakestoreapi.com/"
+        private const val BASE_URL_NEW = ""
     }
 
     @Singleton

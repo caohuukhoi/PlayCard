@@ -1,10 +1,12 @@
 package com.khoich.playcard.di.module
 
-import com.khoich.playcard.ui.entermatch.EnterMatchFragment
-import com.khoich.playcard.ui.home.HomeFragment
+import com.khoich.playcard.ui.matchinput.MatchInputFragment
+import com.khoich.playcard.ui.main.home.HomeFragment
 import com.khoich.playcard.ui.main.MainActivity
-import com.khoich.playcard.ui.play.PlayFragment
-import com.khoich.playcard.ui.splash.SplashFragment
+import com.khoich.playcard.ui.gameplay.GamePlayFragment
+import com.khoich.playcard.ui.main.gamehistory.GameHistoryFragment
+import com.khoich.playcard.ui.main.playerinfo.PlayerInfoFragment
+import com.khoich.playcard.ui.main.rules.RulesFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -14,11 +16,15 @@ abstract class ActivityBindingModule {
     @ContributesAndroidInjector
     abstract fun bindMainActivity(): MainActivity
     @ContributesAndroidInjector
-    abstract fun bindSplashFragment(): SplashFragment
-    @ContributesAndroidInjector
     abstract fun bindHomeFragment(): HomeFragment
     @ContributesAndroidInjector
-    abstract fun bindEnterMatchFragment(): EnterMatchFragment
+    abstract fun bindMatchInputFragment(): MatchInputFragment
     @ContributesAndroidInjector
-    abstract fun bindPlayFragment(): PlayFragment
+    abstract fun bindGameHistoryFragment(): GameHistoryFragment
+    @ContributesAndroidInjector
+    abstract fun bindGamePlayFragment(): GamePlayFragment
+    @ContributesAndroidInjector
+    abstract fun bindRulesFragment(): RulesFragment
+    @ContributesAndroidInjector
+    abstract fun bindPlayerInfoFragment(): PlayerInfoFragment
 }

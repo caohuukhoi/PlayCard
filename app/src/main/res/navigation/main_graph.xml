@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.khoich.playcard.ui.main.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_matchInputFragment"
+            app:destination="@id/matchInputFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gamePlayFragment"
+            app:destination="@id/gamePlayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameHistoryFragment"
+        android:name="com.khoich.playcard.ui.main.gamehistory.GameHistoryFragment"
+        android:label="GameHistoryFragment"
+        tools:layout="@layout/fragment_game_history"/>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.khoich.playcard.ui.main.rules.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/playerInfoFragment"
+        android:name="com.khoich.playcard.ui.main.playerinfo.PlayerInfoFragment"
+        android:label="fragment_player_info"
+        tools:layout="@layout/fragment_player_info" />
+    <fragment
+        android:id="@+id/matchInputFragment"
+        android:name="com.khoich.playcard.ui.matchinput.MatchInputFragment"
+        android:label="MatchInputFragment"
+        tools:layout="@layout/fragment_match_input">
+        <action
+            android:id="@+id/action_matchInputFragment_to_gamePlayFragment"
+            app:destination="@id/gamePlayFragment"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/gamePlayFragment"
+        android:name="com.khoich.playcard.ui.gameplay.GamePlayFragment"
+        android:label="fragment_game_play"
+        tools:layout="@layout/fragment_game_play" />
+</navigation>

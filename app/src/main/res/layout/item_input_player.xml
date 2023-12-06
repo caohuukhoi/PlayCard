@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Người chơi 1"
+            android:textColor="@color/greyText"
+            android:textSize="@dimen/_16sdp" />
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPlayer"
+            android:layout_alignStart="@id/tvPlayer"
+            android:layout_alignEnd="@id/tvPlayer"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="wrap_content"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                tools:src="@drawable/img" />
+
+            <Button
+                android:id="@+id/btnChooseImage1"
+                android:layout_width="wrap_content"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#A0A0A0"
+                android:text="Chọn ảnh" />
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:hint="Nhập tên người chơi 1"
+            android:inputType="text"
+            android:maxLength="16"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+</layout>
+

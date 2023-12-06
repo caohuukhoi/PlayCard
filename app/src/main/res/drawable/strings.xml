@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Ecommerce Application</string>
-    <string name="search_product">Tìm kiếm sản phẩm</string>
-    <string name="message">Message</string>
-    <string name="cart">cart</string>
-</resources>
